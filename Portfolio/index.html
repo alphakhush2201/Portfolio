@@ -5,41 +5,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h2>
-            <center>Khushwant Singh Chouhan</center>
-        </h2>
-        <center>
-            <h4>
-                CSE | TECH ENTHUSIAST | CODER |
-                <a href="https://www.instagram.com/alpha.khush/"><img height="12" src="/instalogo.jpeg"
-                        alt="instagram" /></a>
-                |
-                <a href="https://www.linkedin.com/in/khush0in/"><img height="12" src="/linkedinlogobnc.png" alt="linkedin" /></a>
-                 | 
-                 <a href="https://github.com/alphakhush2201/"><img src="/githublogobnc.png" alt="github" height="13"></a>
-            </h4>
-        </center>
-        <hr />
-        <center>
-            <h3><a href="/projects.html">Projects</a> <a href="/Experience.html">Experience</a> <a href="/about.html">About</a></h3> 
+    <nav class="navbar">
+        <div class="logo">KSC</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="Experience.html">Experience</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
 
-        </center>
-    </header>
-    <main>
-        <center>
-            <h1>Hi, I am Khushwant Singh Chouhan</h1>
-            <h2>Computer Science Engineering Student</h2>
-            <h3>Technophile | Coder | Tech Enthusiast</h3>
-            <h4>Currently learning Web Development and Competitive Programming</h4>
-            <img src="DSC_1463.JPG" height="300" alt="my photo">
-        </center>
-
+    <main class="about-container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="typing-animation">
+                    <h1>Hi, I'm <span class="highlight">Khushwant Singh Chouhan</span></h1>
+                </div>
+                <div class="fade-in">
+                    <h2>Computer Science Engineering Student</h2>
+                    <h3><span class="tag">Technophile</span> <span class="tag">Coder</span> <span class="tag">Tech Enthusiast</span></h3>
+                    <p class="description">Passionate about crafting exceptional web experiences and solving complex problems through competitive programming.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/alpha.khush/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="tooltip">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/khush0in/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="tooltip">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/alphakhush2201/" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span class="tooltip">GitHub</span>
+                        </a>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="/projects.html" class="cta-button primary-button">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <a href="about.html" class="cta-button secondary-button">
+                            <i class="fas fa-user"></i> About Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-image-container">
+                <div class="image-frame">
+                    <img src="DSC_1463.JPG" alt="Khushwant Singh Chouhan" class="profile-image">
+                </div>
+                <div class="floating-elements">
+                    <div class="tech-stack">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-react"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
+    <script src="script.js"></script>
 </body>
 
 </html>
