@@ -521,6 +521,7 @@ body {
     color: rgba(124, 58, 237, 0.6);
     text-shadow: 0 0 15px rgba(124, 58, 237, 0.7);
     font-size: 1.5rem;
+    transition: transform 0.1s linear;
 }
 
 /* Ensure main content stays above rain */

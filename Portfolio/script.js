@@ -140,114 +140,42 @@ document.addEventListener('DOMContentLoaded', () => {
         typeWriter(descriptionElement, text);
     }
 
-    // Tech Rain Animation
-    function setupTechRain() {
-        const rainContainer = document.querySelector('.tech-rain');
-        if (!rainContainer) return; // Safety check
-        
-        const icons = rainContainer.querySelectorAll('i');
-        
-        icons.forEach(icon => {
-            // Random horizontal position
-            const left = Math.random() * 100;
-            // Random animation duration between 7 and 15 seconds
-            const duration = 7 + Math.random() * 8;
-            // Random delay
-            const delay = Math.random() * 5;
-            // Random size between 1rem and 2rem
-            const size = 1 + Math.random();
-            
-            icon.style.left = `${left}%`;
-            icon.style.animationDuration = `${duration}s`;
-            icon.style.animationDelay = `${delay}s`;
-            icon.style.fontSize = `${size}rem`;
-            
-            // Debug log
-            console.log('Icon initialized:', {
-                left,
-                duration,
-                delay,
-                size
-            });
-        });
-    }
-
-    // Initialize tech rain
-    setupTechRain();
-    console.log('Tech rain initialization attempted'); // Debug log
-
-    // Regenerate rain animation on window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(setupTechRain, 300);
-    });
-
-    const cursorDot = document.querySelector(".cursor-dot");
-    const cursorOutline = document.querySelector(".cursor-dot-outline");
-    const techRainContainer = document.querySelector(".tech-rain");
+    // Audio Elements
     const audio = document.getElementById('background-music');
     const playPauseBtn = document.getElementById('play-pause-btn');
     const volumeSlider = document.getElementById('volume-slider');
     const playPauseIcon = playPauseBtn.querySelector('i');
 
     // Initialize audio
-    audio.volume = volumeSlider.value / 100;
-    
-    // Function to play audio
-    const playAudio = async () => {
+    let hasStarted = false;
+    audio.volume = 0.5;
+
+    // Function to handle audio play
+    const startAudio = async () => {
         try {
-            // Create and resume AudioContext
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            if (audioContext.state === 'suspended') {
-                await audioContext.resume();
-            }
-            
-            // Play audio
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    playPauseIcon.classList.remove('fa-play');
-                    playPauseIcon.classList.add('fa-pause');
-                    console.log('Audio started successfully');
-                }).catch(error => {
-                    console.log('Audio play failed:', error);
-                });
-            }
-        } catch (error) {
-            console.log('Play error:', error);
+            await audio.play();
+            playPauseIcon.classList.remove('fa-play');
+            playPauseIcon.classList.add('fa-pause');
+        } catch (err) {
+            console.error('Audio play failed:', err);
         }
     };
 
-    // Add click event listener to the entire document
-    let hasInteracted = false;
-    document.addEventListener('click', async () => {
-        if (!hasInteracted) {
-            await playAudio();
-            hasInteracted = true; // Prevent multiple initializations
+    // Document click handler for first interaction
+    document.addEventListener('click', () => {
+        if (!hasStarted) {
+            startAudio();
+            hasStarted = true;
         }
-    });
+    }, { once: true });
 
-    // Cursor Movement
-    document.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-        
-        requestAnimationFrame(() => {
-            const transform = `translate(${posX}px, ${posY}px)`;
-            cursorDot.style.transform = transform;
-            cursorOutline.style.transform = transform;
-        });
-    });
-
-    // Play/Pause button
+    // Play/Pause button handler
     playPauseBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent triggering the document click handler
+        e.stopPropagation();
         if (audio.paused) {
-            audio.play().then(() => {
-                playPauseIcon.classList.remove('fa-play');
-                playPauseIcon.classList.add('fa-pause');
-            }).catch(err => console.log('Play failed:', err));
+            audio.play();
+            playPauseIcon.classList.remove('fa-play');
+            playPauseIcon.classList.add('fa-pause');
         } else {
             audio.pause();
             playPauseIcon.classList.remove('fa-pause');
@@ -257,23 +185,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Volume control
     volumeSlider.addEventListener('input', (e) => {
-        e.stopPropagation(); // Prevent triggering the document click handler
         audio.volume = e.target.value / 100;
     });
 
-    // Update play/pause button on audio end
-    audio.addEventListener('ended', () => {
-        if (!audio.loop) {  // Only update if not looping
-            playPauseIcon.classList.remove('fa-pause');
-            playPauseIcon.classList.add('fa-play');
-        }
-    });
+    // Cursor Elements
+    const cursorDot = document.querySelector(".cursor-dot");
+    const cursorOutline = document.querySelector(".cursor-dot-outline");
+    let cursorX = 0;
+    let cursorY = 0;
 
-    // Debug listeners
-    audio.addEventListener('play', () => console.log('Audio play event'));
-    audio.addEventListener('playing', () => console.log('Audio playing event'));
-    audio.addEventListener('pause', () => console.log('Audio paused event'));
-    audio.addEventListener('error', (e) => console.log('Audio error:', e));
+    // Cursor Movement
+    document.addEventListener('mousemove', (e) => {
+        cursorX = e.clientX;
+        cursorY = e.clientY;
+        
+        requestAnimationFrame(() => {
+            const transform = `translate(${cursorX}px, ${cursorY}px)`;
+            cursorDot.style.transform = transform;
+            cursorOutline.style.transform = transform;
+        });
+    });
 
     // Tech Rain
     class TechDrop {
@@ -281,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.element = document.createElement('i');
             this.element.className = this.getRandomTechIcon();
             this.reset();
-            techRainContainer.appendChild(this.element);
+            document.querySelector('.tech-rain').appendChild(this.element);
         }
 
         getRandomTechIcon() {
@@ -297,23 +228,31 @@ document.addEventListener('DOMContentLoaded', () => {
             this.y = -30;
             this.speed = 1 + Math.random() * 2;
             this.deflected = false;
-            this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
+            this.vx = 0;
+            this.vy = this.speed;
+            this.updatePosition();
         }
 
-        update(cursorX, cursorY) {
+        updatePosition() {
+            this.element.style.left = `${this.x}px`;
+            this.element.style.top = `${this.y}px`;
+        }
+
+        update() {
             if (!this.deflected) {
-                this.y += this.speed;
+                this.y += this.vy;
                 
                 // Check collision with cursor
                 const dx = this.x - cursorX;
                 const dy = this.y - cursorY;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                if (distance < 50) {
+                if (distance < 40) { // Collision radius
                     this.deflected = true;
                     const angle = Math.atan2(dy, dx) + (Math.random() * 0.5 - 0.25);
-                    this.vx = Math.cos(angle) * 5;
-                    this.vy = Math.sin(angle) * 5;
+                    const deflectSpeed = 5;
+                    this.vx = Math.cos(angle) * deflectSpeed;
+                    this.vy = Math.sin(angle) * deflectSpeed;
                 }
             } else {
                 this.x += this.vx;
@@ -326,19 +265,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.reset();
             }
 
-            this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
+            this.updatePosition();
         }
     }
 
     // Create tech drops
-    const drops = Array.from({ length: 30 }, () => new TechDrop());
+    const drops = Array.from({ length: 20 }, () => new TechDrop());
 
     // Animation loop
     function animate() {
-        const cursorX = parseFloat(cursorDot.style.transform.split('(')[1]) || 0;
-        const cursorY = parseFloat(cursorDot.style.transform.split(',')[1]) || 0;
-        
-        drops.forEach(drop => drop.update(cursorX, cursorY));
+        drops.forEach(drop => drop.update());
         requestAnimationFrame(animate);
     }
 
