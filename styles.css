@@ -268,10 +268,12 @@ body {
 
 .project-image {
     width: 100%;
-    height: 400px; /* Significantly increased height */
+    height: 400px;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+    position: relative;
+    background: var(--bg-secondary); /* Added to ensure visible container */
 }
 
 .project-image img {
@@ -1149,15 +1151,14 @@ button:hover ~ .cursor-dot-outline,
 
 /* Slideshow styles */
 .slideshow-container {
-    position: relative;
     width: 100%;
     height: 100%;
 }
 
 .slides {
-    display: none;
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 .slides.active {
@@ -1167,7 +1168,8 @@ button:hover ~ .cursor-dot-outline,
 .slides img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Keep contain to show full image */
+    background: var(--bg-secondary); /* Match container background */
 }
 
 /* Navigation arrows */
