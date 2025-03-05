@@ -1,81 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushwant Singh Chouhan - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Add these at the very top of body -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-dot-outline"></div>
+    <div class="tech-rain-container">
+        <div class="tech-rain"></div>
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">KSC</div>
+        <div class="logo">
+            <span class="logo-text">KSC</span>
+        </div>
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="Experience.html">Experience</a>
-            <a href="about.html">About</a>
+            <a href="#about" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </a>
+            <a href="#projects" class="nav-item">
+                <i class="fas fa-code-branch"></i>
+                <span>Projects</span>
+            </a>
+            <a href="#experience" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="#achievements" class="nav-item">
+                <i class="fas fa-trophy"></i>
+                <span>Achievements</span>
+            </a>
+            <a href="#contact" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
         </div>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 
-    <main class="about-container">
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="typing-animation">
-                    <h1>Hi, I'm <span class="highlight">Khushwant Singh Chouhan</span></h1>
-                </div>
-                <div class="fade-in">
-                    <h2>Computer Science Engineering Student</h2>
-                    <h3><span class="tag">Technophile</span> <span class="tag">Coder</span> <span class="tag">Tech Enthusiast</span></h3>
-                    <p class="description">Passionate about crafting exceptional web experiences and solving complex problems through competitive programming.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/alpha.khush/" target="_blank" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                            <span class="tooltip">Instagram</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/khush0in/" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                            <span class="tooltip">LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/alphakhush2201/" target="_blank" class="social-icon">
-                            <i class="fab fa-github"></i>
-                            <span class="tooltip">GitHub</span>
-                        </a>
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-content" data-aos="fade-right">
+                        <h1>Hi, I'm <span class="highlight">Khushwant Singh Chouhan</span></h1>
+                        <h2>Computer Science Engineering Student</h2>
+                        <p class="about-description">
+                            A passionate technophile and coder dedicated to creating innovative solutions.
+                            Currently pursuing Computer Science Engineering and exploring the vast world of technology.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-item"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-item"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-item"><i class="fab fa-react"></i> React</span>
+                            <span class="tech-item"><i class="fab fa-python"></i> Python</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/alphakhush2201" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/khush0in" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/alpha.khush" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    
-                    <div class="cta-buttons">
-                        <a href="/projects.html" class="cta-button primary-button">
-                            <i class="fas fa-code"></i> View Projects
-                        </a>
-                        <a href="about.html" class="cta-button secondary-button">
-                            <i class="fas fa-user"></i> About Me
-                        </a>
+                    <div class="profile-image" data-aos="fade-left">
+                        <img src="DSC_1463.JPG" alt="Khushwant Singh Chouhan">
                     </div>
                 </div>
             </div>
-            <div class="profile-image-container">
-                <div class="image-frame">
-                    <img src="DSC_1463.JPG" alt="Khushwant Singh Chouhan" class="profile-image">
-                </div>
-                <div class="floating-elements">
-                    <div class="tech-stack">
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-css3-alt"></i>
-                        <i class="fab fa-js"></i>
-                        <i class="fab fa-react"></i>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project Card Template -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="project1.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-details">
+                            <h3>Project Name</h3>
+                            <p>Project description goes here. Brief overview of what the project does.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item" data-aos="fade-up">
+                        <div class="experience-date">2023 - Present</div>
+                        <div class="experience-content">
+                            <h3>Position Title</h3>
+                            <h4>Company Name</h4>
+                            <ul>
+                                <li>Key achievement or responsibility</li>
+                                <li>Another key achievement</li>
+                                <li>Technologies used: React, Node.js, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add more experience items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this after the experience section and before the contact section -->
+        <section id="achievements" class="section achievements-section">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">Achievements</h2>
+                <div class="achievements-grid">
+                    <!-- Achievement Card 1 -->
+                    <div class="achievement-card" data-aos="fade-up">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Achievement Title</h3>
+                            <p>Description of your achievement. What you accomplished and its significance.</p>
+                            <span class="achievement-date">2023</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 2 -->
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Competition Winner</h3>
+                            <p>Details about the competition and your winning achievement.</p>
+                            <span class="achievement-date">2023</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 3 -->
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Certification</h3>
+                            <p>Details about your certification and its importance.</p>
+                            <span class="achievement-date">2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Your Location</span>
+                        </div>
+                    </div>
+                    <form class="contact-form" data-aos="fade-left">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
     <script src="script.js"></script>
-</body>
 
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <audio id="background-music" loop>
+.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="audio-controls">
+            <button id="play-pause-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" id="volume-slider" min="0" max="100" value="50">
+            </div>
+        </div>
+    </div>
+</body>
 </html>
