@@ -772,6 +772,24 @@ img {
     font-size: 0.9rem;
 }
 
+.achievement-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.achievement-link {
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.achievement-link:hover {
+    color: var(--highlight-color, #fff);
+}
+
 /* Achievements Responsive */
 @media (max-width: 768px) {
     .achievements-grid {
