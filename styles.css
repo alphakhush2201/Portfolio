@@ -253,24 +253,66 @@ body {
     gap: 2rem;
 }
 
-.project-card {
+.project-box {
     background: var(--card-bg);
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    height: auto;
+    min-height: 700px; /* Significantly increased minimum height */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-primary);
+.project-image {
+    width: 100%;
+    height: 400px; /* Significantly increased height */
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
 }
 
 .project-image img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain; /* Changed to contain to show full image without cropping */
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.project-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .project-box {
+        min-height: 650px;
+    }
+    .project-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-box {
+        min-height: 600px;
+    }
+    .project-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-box {
+        min-height: 550px;
+        padding: 1.5rem;
+    }
+    .project-image {
+        height: 250px;
+    }
 }
 
 .project-details {
@@ -289,6 +331,24 @@ body {
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.9rem;
+}
+
+.project-description {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.project-description li {
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-description strong {
+    color: var(--accent-primary);
+    font-weight: 600;
 }
 
 /* Experience Section */
@@ -468,7 +528,7 @@ body {
     color: var(--accent-primary);
 }
 
-.project-card:hover {
+.project-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
@@ -685,7 +745,7 @@ img {
 /* Touch Device Optimization */
 @media (hover: none) {
     .nav-item:hover,
-    .project-card:hover,
+    .project-box:hover,
     .tech-item:hover {
         transform: none;
     }
@@ -888,6 +948,7 @@ img {
 
 #play-pause-btn {
     background: transparent;
+    
     border: none;
     color: var(--accent-primary);
     font-size: 1rem;
@@ -1014,14 +1075,14 @@ img {
 a:hover ~ .cursor-dot,
 button:hover ~ .cursor-dot,
 .nav-item:hover ~ .cursor-dot,
-.project-card:hover ~ .cursor-dot {
+.project-box:hover ~ .cursor-dot {
     transform: translate(-50%, -50%) scale(2);
 }
 
 a:hover ~ .cursor-dot-outline,
 button:hover ~ .cursor-dot-outline,
 .nav-item:hover ~ .cursor-dot-outline,
-.project-card:hover ~ .cursor-dot-outline {
+.project-box:hover ~ .cursor-dot-outline {
     width: 100px;
     height: 100px;
     background: rgba(124, 58, 237, 0.3);
@@ -1084,4 +1145,90 @@ button:hover ~ .cursor-dot-outline,
 
 .timeline-item:nth-child(odd) {
     left: 0;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slides.active {
+    display: block;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: var(--text-primary);
+    background-color: rgba(77, 85, 204, 0.3);
+    border: none;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(77, 85, 204, 0.8);
+}
+
+/* Dots */
+.dots-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    background-color: var(--text-secondary);
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: var(--accent-primary);
+}
+
+/* Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
 }

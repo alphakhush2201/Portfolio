@@ -96,20 +96,56 @@ I thrive on solving complex problems and am always looking for new challenges to
                 <div class="projects-grid">
                     <!-- Project Card Template -->
                     <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="project1.jpg" alt="Project 1">
-                        </div>
-                        <div class="project-details">
-                            <h3>Project Name</h3>
-                            <p>Project description goes here. Brief overview of what the project does.</p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
+                        <div class="project-box">
+                            <div class="project-image">
+                                <div class="slideshow-container">
+                                    <div class="slides fade">
+                                        <img src="project1.jpg" alt="School Management System - Dashboard">
+                                    </div>
+                                    <div class="slides fade">
+                                        <img src="project2.jpg" alt="School Management System - Student Portal">
+                                    </div>
+                                    <div class="slides fade">
+                                        <img src="path/to/image3.jpg" alt="School Management System - Admin Panel">
+                                    </div>
+                                    
+                                    <!-- Navigation arrows -->
+                                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                                    <button class="next" onclick="changeSlide(1)">❯</button>
+                                    
+                                    <!-- Dots/circles -->
+                                    <div class="dots-container">
+                                        <span class="dot" onclick="currentSlide(1)"></span>
+                                        <span class="dot" onclick="currentSlide(2)"></span>
+                                        <span class="dot" onclick="currentSlide(3)"></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <div class="project-details">
+                                <h3>School Management System</h3>
+                                <ul class="project-description">
+                                    <li>
+                                        <strong>Developed</strong> a <strong>School Management System</strong> using <strong>Spring Boot (Java) and Django/Flask (Python)</strong> for the backend.
+                                    </li>
+                                    <li>
+                                        <strong>Designed</strong> a structured database to manage student details, class information, and fee records.
+                                    </li>
+                                    <li>
+                                        <strong>Integrated</strong> a responsive <strong>frontend</strong> with the backend for seamless data retrieval and management.
+                                    </li>
+                                    <li>
+                                        <strong>Planned</strong> future enhancements, including <strong>facial recognition for attendance</strong> and an <strong>online fee payment gateway</strong>.
+                                    </li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                </div>
                             </div>
                         </div>
                     </div>
