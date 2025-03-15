@@ -302,7 +302,7 @@ body {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
     margin-bottom: 1.5rem;
 }
 
@@ -1288,4 +1288,59 @@ button:hover ~ .cursor-dot-outline,
 
 .project-link i {
     font-size: 1.1rem;
+}
+
+.project-tech span {
+    background: var(--bg-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-tech span:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.project-tech span i {
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+}
+
+.project-tech span:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--accent-glow);
+}
+
+.project-tech span:hover i {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-tech {
+        justify-content: center;
+    }
+    
+    .project-tech span {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .project-tech span i {
+        font-size: 1rem;
+    }
+}
+
+/* Add hover effect to match tech-item */
+.project-tech span:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
 }

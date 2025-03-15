@@ -10,6 +10,13 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+      integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -198,21 +205,129 @@
                     </li>
                   </ul>
                   <div class="project-tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Spring Boot</span>
-                    <span>Django</span>
-                    <span>Flask</span>
+                    <span><i class="fab fa-html5"></i>HTML</span>
+                    <span><i class="fab fa-css3-alt"></i>CSS</span>
+                    <span><i class="fab fa-js"></i>JavaScript</span>
+                    <span><i class="fas fa-leaf"></i>Spring Boot</span>
+                    <span><i class="fas fa-code"></i>Django</span>
+                    <span><i class="fab fa-python"></i>Flask</span>
                   </div>
                   <div class="project-links">
-                    <a href="https://github.com/alphakhush2201/ERP" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> 
-                        <span>View Code</span>
+                    <a
+                      href="https://github.com/alphakhush2201/ERP"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fab fa-github"></i>
+                      <span>View Code</span>
                     </a>
-                    <a href="https://alphakhush2201.github.io/ERP/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i>
-                        <span>Live Demo</span>
+                    <a
+                      href="https://alphakhush2201.github.io/ERP/"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Trading Bot project card ends here -->
+            </div>
+
+            <!-- New Project Card -->
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-box">
+                <div class="project-image">
+                  <div class="slideshow-container">
+                    <div class="slides fade">
+                      <img
+                        src="coupon1.jpg"
+                        alt="Round Robin Coupon - Dashboard"
+                      />
+                    </div>
+                    <div class="slides fade">
+                      <img
+                        src="coupon2.jpg"
+                        alt="Round Robin Coupon - Distribution"
+                      />
+                    </div>
+                    <div class="slides fade">
+                      <img
+                        src="coupon3.jpg"
+                        alt="Round Robin Coupon - Analytics"
+                      />
+                    </div>
+
+                    <!-- Navigation arrows -->
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+
+                    <!-- Dots/circles -->
+                    <div class="dots-container">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <h3>Round Robin Coupon Distribution System</h3>
+                  <ul class="project-description">
+                    <li>
+                      <strong>Designed</strong> and
+                      <strong>implemented</strong> a fair coupon distribution
+                      system using <strong>Spring Boot</strong> and
+                      <strong>React</strong>.
+                    </li>
+                    <li>
+                      <strong>Created</strong> an efficient algorithm for
+                      equitable distribution of coupons among customers using
+                      Round Robin scheduling.
+                    </li>
+                    <li>
+                      <strong>Built</strong> a real-time monitoring dashboard
+                      for tracking coupon distribution metrics and customer
+                      engagement.
+                    </li>
+                    <li>
+                      <strong>Integrated</strong> with multiple payment gateways
+                      and implemented secure authentication using JWT.
+                    </li>
+                  </ul>
+                  <div class="project-tech">
+                    <span><i class="fab fa-react"></i>React</span>
+                    <span><i class="fab fa-node-js"></i>Express.js</span>
+                    <span><i class="fab fa-python"></i>Python</span>
+                    <span><i class="fab fa-database"></i>FaunaDB</span>
+                    <span><i class="fab fa-code"></i>Spring Boot</span>
+                    <span><i class="fab fa-docker"></i>Docker</span>
+                    <span><i class="fab fa-cloud"></i> Railway</span>
+                    <span><i class="fab fa-database"></i>PostgreSQL</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/alphakhush2201/assign.git"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fab fa-github"></i>
+                      <span>View Code SpringBoot</span>
+                    </a>
+                    <a
+                      href="https://github.com/alphakhush2201/Round_Robin_Coupon_Distribution.git" target="_blank" class="project-link"
+                    >
+                      <i class="fab fa-github"></i>
+                      <span>View Code Express.js</span>
+                    </a>
+                    <a
+                      href="https://round-robin-coupon-app.netlify.app/"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Live Demo Express.js</span>
+                      <a href="https://coupon-frontend-seven.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i><span>Live Demo SpringBoot</span></a>
                     </a>
                   </div>
                 </div>
@@ -292,7 +407,8 @@
               <div class="achievement-content">
                 <h3>Competition Winner</h3>
                 <p>
-                  Details about the competition and your winning achievement.
+                  Won the Coding Competition held at the college level and
+                  secured 1st position.
                 </p>
                 <div class="achievement-footer">
                   <span class="achievement-date">2023</span>
@@ -409,7 +525,11 @@
                 <p>Completed Introduction to Java course from Coursera.</p>
                 <div class="achievement-footer">
                   <span class="achievement-date">2023</span>
-                  <a href="https://coursera.org/share/5162879761d2a847cb6049d24d465eb3" class="achievement-link">View Details</a>
+                  <a
+                    href="https://coursera.org/share/5162879761d2a847cb6049d24d465eb3"
+                    class="achievement-link"
+                    >View Details</a
+                  >
                 </div>
               </div>
             </div>
@@ -425,12 +545,14 @@
               </div>
               <div class="achievement-content">
                 <h3>Crash Course on Python by Google</h3>
-                <p>
-                  Completed Crash Course on Python course from Coursera.
-                </p>
+                <p>Completed Crash Course on Python course from Coursera.</p>
                 <div class="achievement-footer">
                   <span class="achievement-date">2024</span>
-                  <a href="https://coursera.org/share/f6a611ce0153c390b0f172e2db408ef0" class="achievement-link">View Details</a>
+                  <a
+                    href="https://coursera.org/share/f6a611ce0153c390b0f172e2db408ef0"
+                    class="achievement-link"
+                    >View Details</a
+                  >
                 </div>
               </div>
             </div>
@@ -445,15 +567,21 @@
                 <i class="fas fa-certificate"></i>
               </div>
               <div class="achievement-content">
-                <h3>Introduction to Cybersecuity Tools & Cyberattacks by IBM</h3>
+                <h3>
+                  Introduction to Cybersecuity Tools & Cyberattacks by IBM
+                </h3>
                 <p>
                   Earned Introduction to Cybersecuity Tools & Cyberattacks
-                  certification demonstrating cybersecuity fundamentals from Coursera.
-
+                  certification demonstrating cybersecuity fundamentals from
+                  Coursera.
                 </p>
                 <div class="achievement-footer">
                   <span class="achievement-date">2024</span>
-                  <a href="https://coursera.org/share/c8cc1321f6fb8f5c64510ec81827b61f" class="achievement-link">View Details</a>
+                  <a
+                    href="https://coursera.org/share/c8cc1321f6fb8f5c64510ec81827b61f"
+                    class="achievement-link"
+                    >View Details</a
+                  >
                 </div>
               </div>
             </div>
