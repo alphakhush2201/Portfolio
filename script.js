@@ -308,7 +308,50 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Cursor and rain initialized');
 
     // Initialize all slideshows
-    document.addEventListener('DOMContentLoaded', function() {
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    
+    slideshowContainers.forEach((container, containerIndex) => {
+        const slides = container.getElementsByClassName('slides');
+        const dots = container.getElementsByClassName('dot');
+        let slideIndex = 1;
+
+        // Initialize first slide
+        showSlides(slideIndex);
+
+        // Add click handlers to prev/next buttons
+        container.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+        container.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
+        // Add click handlers to dots
+        Array.from(dots).forEach((dot, index) => {
+            dot.addEventListener('click', () => currentSlide(index + 1));
+        });
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+
+            Array.from(slides).forEach(slide => slide.style.display = "none");
+            Array.from(dots).forEach(dot => dot.classList.remove("active"));
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        // Auto-advance slides for this container
+        setInterval(() => changeSlide(1), 5000);
+    });
+
+    // Remove the duplicate DOMContentLoaded listener and global changeSlide function
+    document.removeEventListener('DOMContentLoaded', function() {
         const slideshowContainers = document.querySelectorAll('.slideshow-container');
         
         slideshowContainers.forEach((container) => {
