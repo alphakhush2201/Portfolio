@@ -309,44 +309,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all slideshows
     document.addEventListener('DOMContentLoaded', function() {
-        // Get all slideshow containers
         const slideshowContainers = document.querySelectorAll('.slideshow-container');
         
-        // Initialize each slideshow
-        slideshowContainers.forEach((container, containerIndex) => {
+        slideshowContainers.forEach((container) => {
             const slides = container.getElementsByClassName('slides');
-            const dots = container.getElementsByClassName('dot');
-            let slideIndex = 1;
-    
-            // Initialize first slide
-            showSlides(slideIndex);
-    
-            // Add click handlers to prev/next buttons
-            container.querySelector('.prev').onclick = () => changeSlide(-1);
-            container.querySelector('.next').onclick = () => changeSlide(1);
-    
-            // Add click handlers to dots
-            Array.from(dots).forEach((dot, index) => {
-                dot.onclick = () => currentSlide(index + 1);
-            });
-    
-            function changeSlide(n) {
-                showSlides(slideIndex += n);
-            }
-    
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-    
-            function showSlides(n) {
-                if (n > slides.length) slideIndex = 1;
-                if (n < 1) slideIndex = slides.length;
-    
-                Array.from(slides).forEach(slide => slide.style.display = "none");
-                Array.from(dots).forEach(dot => dot.classList.remove("active"));
-    
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].classList.add("active");
+            if (slides.length > 0) {
+                slides[0].classList.add('active'); // Show first slide by default
             }
         });
     });
