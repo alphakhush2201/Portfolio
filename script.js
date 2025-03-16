@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.querySelector('i').classList.toggle('fa-times');
     });
 
-    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
             navLinks.classList.remove('active');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Active nav item based on scroll position
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-item');
 
@@ -66,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalBtnText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
             const formData = {
                 name: contactForm.querySelector('input[type="text"]').value,
@@ -74,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             try {
-                // Update the URL to use relative path or environment variable
                 const response = await fetch('/api/send-message', {
                     method: 'POST',
                     headers: {
@@ -86,15 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
                 
                 if (response.ok) {
-                    alert('Message sent successfully!');
-                    contactForm.reset();
+                    submitBtn.textContent = 'Sent!';
+                    setTimeout(() => {
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                        contactForm.reset();
+                    }, 2000);
                 } else {
                     throw new Error(data.message || 'Failed to send message');
                 }
             } catch (error) {
+                submitBtn.textContent = 'Error!';
+                setTimeout(() => {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }, 2000);
                 alert(error.message);
-            } finally {
-                submitBtn.textContent = originalBtnText;
             }
         });
     }

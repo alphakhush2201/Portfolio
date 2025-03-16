@@ -5,20 +5,16 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const port = 3004; // Changed to port 3002
+const port = 3004;
 
 app.use(cors());
 app.use(express.json());
-
-// Serve static files from the current directory
 app.use(express.static(__dirname));
 
-// Serve index.html for the root route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Configure nodemailer with OAuth2
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     host: 'smtp.gmail.com',
