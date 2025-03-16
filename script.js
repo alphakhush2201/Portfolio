@@ -67,13 +67,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalBtnText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             
-            // Simulate form submission (replace with actual form handling)
+            const formData = {
+                name: contactForm.querySelector('input[type="text"]').value,
+                email: contactForm.querySelector('input[type="email"]').value,
+                message: contactForm.querySelector('textarea').value
+            };
+            
             try {
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                alert('Message sent successfully!');
-                contactForm.reset();
+                // Update the URL to use relative path or environment variable
+                const response = await fetch('/api/send-message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                } else {
+                    throw new Error(data.message || 'Failed to send message');
+                }
             } catch (error) {
-                alert('Failed to send message. Please try again.');
+                alert(error.message);
             } finally {
                 submitBtn.textContent = originalBtnText;
             }
