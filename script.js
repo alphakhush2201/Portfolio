@@ -310,60 +310,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize all slideshows
     const slideshowContainers = document.querySelectorAll('.slideshow-container');
     
-    slideshowContainers.forEach((container, containerIndex) => {
-        const slides = container.getElementsByClassName('slides');
-        const dots = container.getElementsByClassName('dot');
-        let slideIndex = 1;
+    slideshowContainers.forEach((container) => {
+        const slides = Array.from(container.getElementsByClassName('slides'));
+        const dots = Array.from(container.getElementsByClassName('dot'));
+        let currentIndex = 0;
 
-        // Initialize first slide
-        showSlides(slideIndex);
+        // Show first slide initially
+        slides[0].style.display = 'block';
+        dots[0].classList.add('active');
 
-        // Add click handlers to prev/next buttons
-        container.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-        container.querySelector('.next').addEventListener('click', () => changeSlide(1));
-
-        // Add click handlers to dots
-        Array.from(dots).forEach((dot, index) => {
-            dot.addEventListener('click', () => currentSlide(index + 1));
+        // Previous button click
+        container.querySelector('.prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlides();
         });
 
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            if (n > slides.length) slideIndex = 1;
-            if (n < 1) slideIndex = slides.length;
-
-            Array.from(slides).forEach(slide => slide.style.display = "none");
-            Array.from(dots).forEach(dot => dot.classList.remove("active"));
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].classList.add("active");
-        }
-
-        // Auto-advance slides for this container
-        setInterval(() => changeSlide(1), 5000);
-    });
-
-    // Remove the duplicate DOMContentLoaded listener and global changeSlide function
-    document.removeEventListener('DOMContentLoaded', function() {
-        const slideshowContainers = document.querySelectorAll('.slideshow-container');
-        
-        slideshowContainers.forEach((container) => {
-            const slides = container.getElementsByClassName('slides');
-            if (slides.length > 0) {
-                slides[0].classList.add('active'); // Show first slide by default
-            }
+        // Next button click
+        container.querySelector('.next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlides();
         });
-    });
 
-    // Optional: Auto-advance slides
-    setInterval(() => {
-        changeSlide(1);
-    }, 5000); // Change slide every 5 seconds
+        // Dot clicks
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlides();
+            });
+        });
+
+        function updateSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentIndex].style.display = 'block';
+            dots[currentIndex].classList.add('active');
+        }
+
+        // Auto advance
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlides();
+        }, 5000);
+    });
 });
