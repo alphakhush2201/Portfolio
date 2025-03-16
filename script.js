@@ -307,38 +307,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // Debug
     console.log('Cursor and rain initialized');
 
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function changeSlide(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        const slides = document.getElementsByClassName("slides");
-        const dots = document.getElementsByClassName("dot");
+    // Initialize all slideshows
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all slideshow containers
+        const slideshowContainers = document.querySelectorAll('.slideshow-container');
         
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        
-        // Hide all slides
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        
-        // Remove active class from all dots
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        
-        // Show current slide and activate corresponding dot
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
+        // Initialize each slideshow
+        slideshowContainers.forEach((container, containerIndex) => {
+            const slides = container.getElementsByClassName('slides');
+            const dots = container.getElementsByClassName('dot');
+            let slideIndex = 1;
+    
+            // Initialize first slide
+            showSlides(slideIndex);
+    
+            // Add click handlers to prev/next buttons
+            container.querySelector('.prev').onclick = () => changeSlide(-1);
+            container.querySelector('.next').onclick = () => changeSlide(1);
+    
+            // Add click handlers to dots
+            Array.from(dots).forEach((dot, index) => {
+                dot.onclick = () => currentSlide(index + 1);
+            });
+    
+            function changeSlide(n) {
+                showSlides(slideIndex += n);
+            }
+    
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+    
+            function showSlides(n) {
+                if (n > slides.length) slideIndex = 1;
+                if (n < 1) slideIndex = slides.length;
+    
+                Array.from(slides).forEach(slide => slide.style.display = "none");
+                Array.from(dots).forEach(dot => dot.classList.remove("active"));
+    
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].classList.add("active");
+            }
+        });
+    });
 
     // Optional: Auto-advance slides
     setInterval(() => {
