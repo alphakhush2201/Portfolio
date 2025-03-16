@@ -266,7 +266,7 @@ body {
 }
 .project-image {
     width: 100%;
-    height: 300px;
+    height: 500px;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -286,6 +286,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    background-color: var(--bg-secondary);
 }
 
 .slideshow-container {
