@@ -238,38 +238,26 @@
             <!-- New Project Card -->
             <div class="project-card" data-aos="fade-up">
               <div class="project-box">
+                <!-- Round Robin Project slideshow -->
                 <div class="project-image">
-                  <div class="slideshow-container">
-                    <div class="slides fade">
-                      <img
-                        src="coupon1.jpg"
-                        alt="Round Robin Coupon - Dashboard"
-                      />
+                    <div class="slideshow-container">
+                        <div class="slides fade">
+                            <img src="coupon1.jpg" alt="Round Robin Coupon - Dashboard" />
+                        </div>
+                        <div class="slides fade">
+                            <img src="coupon2.jpg" alt="Round Robin Coupon - Distribution" />
+                        </div>
+                    
+                        <!-- Navigation arrows -->
+                        <button class="prev" onclick="changeSlide(-1)">❮</button>
+                        <button class="next" onclick="changeSlide(1)">❯</button>
+                    
+                        <!-- Dots/circles -->
+                        <div class="dots-container">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                        </div>
                     </div>
-                    <div class="slides fade">
-                      <img
-                        src="coupon2.jpg"
-                        alt="Round Robin Coupon - Distribution"
-                      />
-                    </div>
-                    <div class="slides fade">
-                      <img
-                        src="coupon3.jpg"
-                        alt="Round Robin Coupon - Analytics"
-                      />
-                    </div>
-
-                    <!-- Navigation arrows -->
-                    <button class="prev" onclick="changeSlide(-1)">❮</button>
-                    <button class="next" onclick="changeSlide(1)">❯</button>
-
-                    <!-- Dots/circles -->
-                    <div class="dots-container">
-                      <span class="dot" onclick="currentSlide(1)"></span>
-                      <span class="dot" onclick="currentSlide(2)"></span>
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                  </div>
                 </div>
                 <div class="project-details">
                   <h3>Round Robin Coupon Distribution System</h3>
