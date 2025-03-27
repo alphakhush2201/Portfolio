@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khushwant Singh Chouhan - Portfolio</title>
+    <link rel="icon" href="KSC.svg" type="image/svg+xml">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -143,6 +144,94 @@
           <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
           <div class="projects-grid">
             <!-- Project Card Template -->
+
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-box">
+                <div class="project-image">
+                  <div class="slideshow-container">
+                    <div class="slides fade">
+                      <img
+                        src="syntaxsucks1.jpg"
+                        alt="School Management System - Dashboard"
+                      />
+                    </div>
+                    <div class="slides fade">
+                      <img
+                        src="syntaxsucks2.jpg"
+                        alt="School Management System - Student Portal"
+                      />
+                    </div>
+                    <div class="slides fade">
+                      <img
+                        src="syntaxsucks3.jpg"
+                        alt="Syntax Sucks"
+                      />
+                    </div>
+
+                    <!-- Navigation arrows -->
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+
+                    <!-- Dots/circles -->
+                    <div class="dots-container">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <h3>Syntax Sucks</h3>
+                  <ul class="project-description">
+                    <li>
+                      <strong>Developed</strong> <i>SyntaxSucks</i>, a no-code programming language that allows users to write applications using plain English.
+                    </li>
+                    <li>
+                      <strong>Designed</strong> a compiler that translates human-readable instructions into Python code, enabling non-tech users to build software easily.
+                    </li>
+                    <li>
+                      <strong>Integrated</strong> AI-powered assistance to help users refine their instructions and generate optimized code suggestions.
+                    </li>
+                    <li>
+                      <strong>Implemented</strong> a FastAPI backend for processing user inputs, authenticating requests, and managing generated code securely.
+                    </li>
+                    <li>
+                      <strong>Planned</strong> future enhancements, including a web-based interface, API integrations, and potential monetization models.
+                    </li>
+                  </ul>
+                  
+                  <div class="project-tech">
+                    <span><i class="fab fa-react"></i> React</span>
+                    <span><i class="fas fa-microchip"></i> Python</span>
+                    <span><i class="fas fa-server"></i> FastAPI Backend</span>
+                    <span><i class="fas fa-database"></i> PostgreSQL</span>
+                    <span><i class="fas fa-memory"></i> Redis (Rate Limiting & Caching)</span>
+                    <span><i class="fas fa-shield-alt"></i> JWT Authentication</span>
+                    <span><i class="fas fa-cloud"></i> API-Driven Architecture</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/alphakhush2201/SyntaxSucks"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fab fa-github"></i>
+                      <span>View Code</span>
+                    </a>
+                    <a
+                      href="https://syntaxsucks.vercel.app/"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Trading Bot project card ends here -->
+            </div>
+          
             <div class="project-card" data-aos="fade-up">
               <div class="project-box">
                 <div class="project-image">
