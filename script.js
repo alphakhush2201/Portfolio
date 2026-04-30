@@ -21,11 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateActiveNavItem() {
         let currentSection = '';
+        const offset = 150; // Detect when section is 150px from top
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (window.scrollY >= (sectionTop - sectionHeight/3)) {
+            const sectionBottom = sectionTop + sectionHeight;
+            
+            // Check if current scroll position is within this section
+            if (window.scrollY + offset >= sectionTop && window.scrollY < sectionBottom) {
                 currentSection = section.getAttribute('id');
             }
         });
@@ -37,6 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Call on page load
+    updateActiveNavItem();
+
+    // Call on scroll with throttling for performance
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveNavItem, 30);
+    });
 
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

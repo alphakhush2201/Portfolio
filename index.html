@@ -1,747 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khushwant Singh Chouhan - Portfolio</title>
-    <link rel="icon" href="KSC.svg" type="image/svg+xml">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
-      integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Add this right after the body tag, before other content -->
-    <div class="tech-rain-container">
-      <div class="tech-rain"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khushwant Singh Chouhan - Portfolio</title>
+  <link rel="icon" href="KSC.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+    integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Add this right after the body tag, before other content -->
+  <div class="tech-rain-container">
+    <div class="tech-rain"></div>
+  </div>
+
+  <!-- Add these at the very top of body -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-dot-outline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-text">KSC</span>
     </div>
-
-    <!-- Add these at the very top of body -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-dot-outline"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">
-        <span class="logo-text">KSC</span>
-      </div>
-      <div class="nav-links">
-        <a href="#about" class="nav-item">
-          <i class="fas fa-user"></i>
-          <span>About Me</span>
-        </a>
-        <a href="#projects" class="nav-item">
-          <i class="fas fa-code-branch"></i>
-          <span>Projects</span>
-        </a>
-        <a href="#experience" class="nav-item">
-          <i class="fas fa-briefcase"></i>
-          <span>Experience</span>
-        </a>
-        <a href="#achievements" class="nav-item">
-          <i class="fas fa-trophy"></i>
-          <span>Achievements</span>
-        </a>
-        <a href="#contact" class="nav-item">
-          <i class="fas fa-envelope"></i>
-          <span>Contact</span>
-        </a>
-        <a href="#resume" class="nav-item">
-          <i class="fas fa-file-alt"></i>
-          <span>Resume</span>
-        </a>
-      </div>
-      <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="section-container">
-          <div class="about-grid">
-            <div class="about-content" data-aos="fade-right">
-              <h1>
-                Hi, I'm <span class="highlight">Khushwant Singh Chouhan</span>
-              </h1>
-              <h2>
-                Aspiring Quantitative & HFT Developer & Full-Stack Engineer.
-              </h2>
-              <p class="about-description">
-                I'm an aspiring Quantitative Developer & Full-Stack Engineer
-                passionate about finance, algorithms, and scalable systems. With
-                a strong foundation in Spring Boot, Django, React, and Python, I
-                love building efficient web applications and exploring
-                high-frequency trading (HFT) strategies. Currently, I'm working
-                on full-stack projects while sharpening my skills in data
-                structures, competitive programming, and algorithmic trading. My
-                goal is to bridge the gap between technology and finance by
-                developing robust trading systems and innovative financial
-                models. I thrive on solving complex problems and am always
-                looking for new challenges to push my boundaries. Let's connect
-                and build something great!
-              </p>
-              <div class="tech-stack">
-                <span class="tech-item"
-                  ><i class="fab fa-html5"></i> HTML5</span
-                >
-                <span class="tech-item"
-                  ><i class="fab fa-css3-alt"></i> CSS3</span
-                >
-                <span class="tech-item"
-                  ><i class="fab fa-js"></i> JavaScript</span
-                >
-                <span class="tech-item"
-                  ><i class="fab fa-react"></i> React</span
-                >
-                <span class="tech-item"
-                  ><i class="fab fa-python"></i> Python</span
-                >
-                <span class="tech-item"><i class="fab fa-java"></i> Java</span>
-                <span class="tech-item"
-                  ><i class="fas fa-code"></i> Django</span
-                >
-                <span class="tech-item"
-                  ><i class="fas fa-leaf"></i> Spring Boot</span
-                >
-              </div>
-              <div class="social-links">
-                <a href="https://github.com/alphakhush2201" target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-                <a href="https://www.linkedin.com/in/khush0in" target="_blank"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-                <a href="https://www.instagram.com/alpha.khush" target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="profile-image" data-aos="fade-left">
-              <img src="profile.jpeg" alt="Khushwant Singh Chouhan" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="section">
-        <div class="section-container">
-          <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-          <div class="projects-grid">
-            <!-- Project Card Template -->
-
-            <div class="project-card" data-aos="fade-up">
-              <div class="project-box">
-                <div class="project-image">
-                  <div class="slideshow-container">
-                    <div class="slides fade">
-                      <img
-                        src="syntaxsucks1.jpg"
-                        alt="School Management System - Dashboard"
-                      />
-                    </div>
-                    <div class="slides fade">
-                      <img
-                        src="syntaxsucks2.jpg"
-                        alt="School Management System - Student Portal"
-                      />
-                    </div>
-                    <div class="slides fade">
-                      <img
-                        src="syntaxsucks3.jpg"
-                        alt="Syntax Sucks"
-                      />
-                    </div>
-
-                    <!-- Navigation arrows -->
-                    <button class="prev" onclick="changeSlide(-1)">❮</button>
-                    <button class="next" onclick="changeSlide(1)">❯</button>
-
-                    <!-- Dots/circles -->
-                    <div class="dots-container">
-                      <span class="dot" onclick="currentSlide(1)"></span>
-                      <span class="dot" onclick="currentSlide(2)"></span>
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-details">
-                  <h3>Syntax Sucks</h3>
-                  <ul class="project-description">
-                    <li>
-                      <strong>Developed</strong> <i>SyntaxSucks</i>, a no-code programming language that allows users to write applications using plain English.
-                    </li>
-                    <li>
-                      <strong>Designed</strong> a compiler that translates human-readable instructions into Python code, enabling non-tech users to build software easily.
-                    </li>
-                    <li>
-                      <strong>Integrated</strong> AI-powered assistance to help users refine their instructions and generate optimized code suggestions.
-                    </li>
-                    <li>
-                      <strong>Implemented</strong> a FastAPI backend for processing user inputs, authenticating requests, and managing generated code securely.
-                    </li>
-                    <li>
-                      <strong>Planned</strong> future enhancements, including a web-based interface, API integrations, and potential monetization models.
-                    </li>
-                  </ul>
-                  
-                  <div class="project-tech">
-                    <span><i class="fab fa-react"></i> React</span>
-                    <span><i class="fas fa-microchip"></i> Python</span>
-                    <span><i class="fas fa-server"></i> FastAPI Backend</span>
-                    <span><i class="fas fa-database"></i> PostgreSQL</span>
-                    <span><i class="fas fa-memory"></i> Redis (Rate Limiting & Caching)</span>
-                    <span><i class="fas fa-shield-alt"></i> JWT Authentication</span>
-                    <span><i class="fas fa-cloud"></i> API-Driven Architecture</span>
-                  </div>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/alphakhush2201/SyntaxSucks"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="fab fa-github"></i>
-                      <span>View Code</span>
-                    </a>
-                    <a
-                      href="https://syntaxsucks.vercel.app/"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                      <span>Live Demo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Trading Bot project card ends here -->
-            </div>
-          
-            <div class="project-card" data-aos="fade-up">
-              <div class="project-box">
-                <div class="project-image">
-                  <div class="slideshow-container">
-                    <div class="slides fade">
-                      <img
-                        src="project1.jpg"
-                        alt="School Management System - Dashboard"
-                      />
-                    </div>
-                    <div class="slides fade">
-                      <img
-                        src="project2.jpg"
-                        alt="School Management System - Student Portal"
-                      />
-                    </div>
-                    <div class="slides fade">
-                      <img
-                        src="project3.jpg"
-                        alt="School Management System - Admin Panel"
-                      />
-                    </div>
-
-                    <!-- Navigation arrows -->
-                    <button class="prev" onclick="changeSlide(-1)">❮</button>
-                    <button class="next" onclick="changeSlide(1)">❯</button>
-
-                    <!-- Dots/circles -->
-                    <div class="dots-container">
-                      <span class="dot" onclick="currentSlide(1)"></span>
-                      <span class="dot" onclick="currentSlide(2)"></span>
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-details">
-                  <h3>School Management System</h3>
-                  <ul class="project-description">
-                    <li>
-                      <strong>Developed</strong> a
-                      <strong>School Management System</strong> using
-                      <strong
-                        >Spring Boot (Java) and Django/Flask (Python)</strong
-                      >
-                      for the backend.
-                    </li>
-                    <li>
-                      <strong>Designed</strong> a structured database to manage
-                      student details, class information, and fee records.
-                    </li>
-                    <li>
-                      <strong>Integrated</strong> a responsive
-                      <strong>frontend</strong> with the backend for seamless
-                      data retrieval and management.
-                    </li>
-                    <li>
-                      <strong>Planned</strong> future enhancements, including
-                      <strong>facial recognition for attendance</strong> and an
-                      <strong>online fee payment gateway</strong>.
-                    </li>
-                  </ul>
-                  <div class="project-tech">
-                    <span><i class="fab fa-html5"></i>HTML</span>
-                    <span><i class="fab fa-css3-alt"></i>CSS</span>
-                    <span><i class="fab fa-js"></i>JavaScript</span>
-                    <span><i class="fas fa-react"></i>React</span>
-                    <span><i class="fas fa-code"></i>Supabase</span>
-                    <span><i class="fab fa-database"></i>PostgreSQL</span>
-                  </div>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/alphakhush2201/ERP"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="fab fa-github"></i>
-                      <span>View Code</span>
-                    </a>
-                    <a
-                      href="https://masteracademt.vercel.app/"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                      <span>Live Demo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Trading Bot project card ends here -->
-            </div>
-
-            <!-- New Project Card -->
-            <div class="project-card" data-aos="fade-up">
-              <div class="project-box">
-                <!-- Round Robin Project slideshow -->
-                <div class="project-image">
-                    <div class="slideshow-container">
-                        <div class="slides fade">
-                            <img src="coupon1.png" alt="Round Robin Coupon - Dashboard" />
-                        </div>
-                        <div class="slides fade">
-                            <img src="coupon22.png" alt="Round Robin Coupon - Distribution" />
-                        </div>
-                    
-                        <!-- Navigation arrows -->
-                        <button class="prev" onclick="changeSlide(-1)">❮</button>
-                        <button class="next" onclick="changeSlide(1)">❯</button>
-                    
-                        <!-- Dots/circles -->
-                        <div class="dots-container">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-details">
-                  <h3>Round Robin Coupon Distribution System</h3>
-                  <ul class="project-description">
-                    <li>
-                      <strong>Designed</strong> and
-                      <strong>implemented</strong> a fair coupon distribution
-                      system using <strong>Spring Boot</strong> and
-                      <strong>React</strong>.
-                    </li>
-                    <li>
-                      <strong>Created</strong> an efficient algorithm for
-                      equitable distribution of coupons among customers using
-                      Round Robin scheduling.
-                    </li>
-                    <li>
-                      <strong>Built</strong> a real-time monitoring dashboard
-                      for tracking coupon distribution metrics and customer
-                      engagement.
-                    </li>
-                    <li>
-                      <strong>Integrated</strong> with multiple payment gateways
-                      and implemented secure authentication using JWT.
-                    </li>
-                  </ul>
-                  <div class="project-tech">
-                    <span><i class="fab fa-react"></i>React</span>
-                    <span><i class="fab fa-node-js"></i>Express.js</span>
-                    <span><i class="fab fa-python"></i>Python</span>
-                    <span><i class="fab fa-database"></i>FaunaDB</span>
-                    <span><i class="fab fa-code"></i>Spring Boot</span>
-                    <span><i class="fab fa-docker"></i>Docker</span>
-                    <span><i class="fab fa-cloud"></i> Railway</span>
-                    <span><i class="fab fa-database"></i>PostgreSQL</span>
-                  </div>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/alphakhush2201/assign.git"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="fab fa-github"></i>
-                      <span>View Code SpringBoot</span>
-                    </a>
-                    <a
-                      href="https://github.com/alphakhush2201/Round_Robin_Coupon_Distribution.git" target="_blank" class="project-link"
-                    >
-                      <i class="fab fa-github"></i>
-                      <span>View Code Express.js</span>
-                    </a>
-                    <a
-                      href="https://round-robin-coupon-app.netlify.app/"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                      <span>Live Demo Express.js</span>
-                      <a href="https://coupon-frontend-seven.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i><span>Live Demo SpringBoot</span></a>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Add more project cards as needed -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="section">
-        <div class="section-container">
-          <h2 class="section-title" data-aos="fade-up">Experience</h2>
-          <div class="experience-timeline">
-            <div class="experience-item" data-aos="fade-up">
-              <div class="experience-date">Jan 2025 - Present</div>
-              <div class="experience-content">
-                <h3>Full Stack Developer</h3>
-                <h4>Master Academy(Freelance)</h4>
-                <ul>
-                  <li>
-                    Developed a School Management System using React, Node.js,
-                    and MongoDB.
-                  </li>
-                  <li>
-                    Designed a structured database to manage student details,
-                    class information, and fee records.
-                  </li>
-                  <li>
-                    Integrated a responsive frontend with the backend for
-                    seamless data retrieval and management.
-                  </li>
-                  <li>
-                    Planned future enhancements, including facial recognition
-                    for attendance and an online fee payment gateway.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Add more experience items as needed -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Add this after the experience section and before the contact section -->
-      <section id="achievements" class="section achievements-section">
-        <div class="section-container">
-          <h2 class="section-title" data-aos="fade-up">Achievements</h2>
-          <div class="achievements-grid">
-            <!-- Achievement Card 1 -->
-            <div class="achievement-card" data-aos="fade-up">
-              <div class="achievement-icon">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Coding Ninjas Contest</h3>
-                <p>
-                  Achieved AIR 75 rank in Coding Ninjas Contest(Premier league).
-                </p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2023</span>
-                  <a href="#" class="achievement-link">View Details</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 2 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-medal"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Competition Winner</h3>
-                <p>
-                  Won the Coding Competition held at the college level and
-                  secured 1st position.
-                </p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2023</span>
-                  <a href="#" class="achievement-link">View Details</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 3 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Python(Basic)</h3>
-                <p>Completed Python(Basic) course from HackerRank.</p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2025</span>
-                  <a
-                    href="https://www.hackerrank.com/certificates/6bf55b85f65f"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- Achievement Card 4 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Java(Basic)</h3>
-                <p>Completed Java(Basic) course from HackerRank.</p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2025</span>
-                  <a
-                    href="https://www.hackerrank.com/certificates/57df5a9cf6cc"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 5 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Software Development Intern</h3>
-                <p>
-                  Completed Certification for role Software Development Intern
-                  from HackerRank.
-                </p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2023</span>
-                  <a
-                    href="https://www.hackerrank.com/certificates/792c253faf92"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 6 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Problem Solving(Basic)</h3>
-                <p>Completed Problem Solving(Basic) course from HackerRank.</p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2023</span>
-                  <a
-                    href="https://www.hackerrank.com/certificates/16a1d4ed509e"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 7 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Introduction to Java by LearnQuest</h3>
-                <p>Completed Introduction to Java course from Coursera.</p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2023</span>
-                  <a
-                    href="https://coursera.org/share/5162879761d2a847cb6049d24d465eb3"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 8 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="700"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>Crash Course on Python by Google</h3>
-                <p>Completed Crash Course on Python course from Coursera.</p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2024</span>
-                  <a
-                    href="https://coursera.org/share/f6a611ce0153c390b0f172e2db408ef0"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Achievement Card 9 -->
-            <div
-              class="achievement-card"
-              data-aos="fade-up"
-              data-aos-delay="800"
-            >
-              <div class="achievement-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="achievement-content">
-                <h3>
-                  Introduction to Cybersecuity Tools & Cyberattacks by IBM
-                </h3>
-                <p>
-                  Earned Introduction to Cybersecuity Tools & Cyberattacks
-                  certification demonstrating cybersecuity fundamentals from
-                  Coursera.
-                </p>
-                <div class="achievement-footer">
-                  <span class="achievement-date">2024</span>
-                  <a
-                    href="https://coursera.org/share/c8cc1321f6fb8f5c64510ec81827b61f"
-                    class="achievement-link"
-                    >View Details</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <div class="section-container">
-          <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
-          <div class="contact-content">
-            <div class="contact-info" data-aos="fade-right">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:khushwant.ksc.in@gmail.com"
-                  >khushwant.ksc.in@gmail.com</a
-                >
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <a href="tel:+919720888267">+91 9720888267</a>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Jaipur,India</span>
-              </div>
-            </div>
-            <form class="contact-form" data-aos="fade-left">
-              <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
-    <script src="script.js"></script>
-
-    <!-- Audio Player -->
-    <div class="audio-player">
-      <audio id="background-music" loop>
-        <source src="Interstellar-Theme.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
-      </audio>
-      <div class="audio-controls">
-        <button id="play-pause-btn">
-          <i class="fas fa-play"></i>
-        </button>
-        <div class="volume-control">
-          <i class="fas fa-volume-up"></i>
-          <input type="range" id="volume-slider" min="0" max="100" value="50" />
-        </div>
-      </div>
+    <div class="nav-links">
+      <a href="#aboutme" class="nav-item">
+        <i class="fas fa-user"></i>
+        <span>About Me</span>
+      </a>
+      <a href="#projects" class="nav-item">
+        <i class="fas fa-code-branch"></i>
+        <span>Projects</span>
+      </a>
+      <a href="#experience" class="nav-item">
+        <i class="fas fa-briefcase"></i>
+        <span>Experience</span>
+      </a>
+      <a href="#achievements" class="nav-item">
+        <i class="fas fa-trophy"></i>
+        <span>Achievements</span>
+      </a>
+      <a href="#contact" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+      <a href="#resume" class="nav-item">
+        <i class="fas fa-file-alt"></i>
+        <span>Resume</span>
+      </a>
     </div>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
 
-    <!-- Add this section before the closing body tag -->
-    <section id="resume" class="section">
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="aboutme" class="section">
       <div class="section-container">
-        <h2 class="section-title">Resume</h2>
-        <div class="resume-container">
-          <a href="resume.pdf" target="_blank" class="resume-download-btn">
-            <i class="fas fa-download"></i>
-            Download Resume
-          </a>
+        <div class="about-grid">
+          <div class="about-content" data-aos="fade-right">
+            <h1>
+              Hi, I'm <span class="highlight">Khushwant Singh Chouhan</span>
+            </h1>
+            <h2>
+              AI Engineer | Building LLM-Powered Systems, Automation & Intelligent Agents
+            </h2>
+            <p class="about-description">
+            AI Engineer focused on building end-to-end intelligent systems using LLMs, agents, and scalable backend architectures.
+
+I work on real-time AI pipelines combining speech recognition, local model inference, and task execution. My projects include a low-latency voice assistant (FRIDAY), a Cursor-like coding assistant (SyntaxSucks), and AI automation systems built on vector databases.
+
+I’m particularly interested in performance optimization, local inference, and production-grade AI systems.
+            </p>
+            </p>
+            <div class="tech-stack">
+          <span class="tech-item"><i class="fas fa-brain"></i> LLMs (Phi-3, Mixtral)</span>
+<span class="tech-item"><i class="fas fa-robot"></i> AI Agents</span>
+<span class="tech-item"><i class="fas fa-microphone"></i> Faster-Whisper (ASR)</span>
+<span class="tech-item"><i class="fas fa-volume-up"></i> TTS Systems</span>
+<span class="tech-item"><i class="fas fa-database"></i> Vector DB (FAISS / pgvector)</span>
+<span class="tech-item"><i class="fas fa-bolt"></i> FastAPI</span>
+<span class="tech-item"><i class="fab fa-python"></i> Python</span>
+<span class="tech-item"><i class="fas fa-cogs"></i> LangChain / LangGraph</span>
+<span class="tech-item"><i class="fas fa-memory"></i> Redis</span>
+<span class="tech-item"><i class="fas fa-server"></i> PostgreSQL</span>
+<span class="tech-item"><i class="fab fa-docker"></i> Docker</span>
+<span class="tech-item"><i class="fab fa-linux"></i> Linux</span>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/alphakhush2201" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/khush0in" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/alpha.khush" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="profile-image" data-aos="fade-left">
+            <img src="profile.jpeg" alt="Khushwant Singh Chouhan" />
+          </div>
         </div>
       </div>
     </section>
-  </body>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+        <div class="projects-grid">
+          <!-- Project Card Template -->
+          <!-- FRIDAY AI Voice Assistant Project Card -->
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-box">
+              <div class="project-image">
+                <div class="slideshow-container">
+                  <div class="slides fade">
+                    <img src="friday1.jpg" alt="FRIDAY - Real-Time AI Voice Assistant UI Dashboard" />
+                  </div>
+                  <div class="slides fade">
+                    <img src="friday2.jpg" alt="FRIDAY - Voice Assistant Pipeline Architecture" />
+                  </div>
+
+                  <!-- Navigation arrows -->
+                  <button class="prev" onclick="changeSlide(-1)">❮</button>
+                  <button class="next" onclick="changeSlide(1)">❯</button>
+
+                  <!-- Dots/circles -->
+                  <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <h3>FRIDAY - Real-Time AI Voice Assistant</h3>
+                <ul class="project-description">
+                  <li>
+                    <strong>Architected</strong> a low-latency, locally-running AI voice assistant inspired by JARVIS
+                    with sub-500ms inference latency.
+                  </li>
+                  <li>
+                    <strong>Built</strong> end-to-end pipeline: <strong>Porcupine wake word detection</strong> →
+                    <strong>Faster-Whisper ASR</strong> → <strong>Intent classification</strong> → <strong>LLM reasoning
+                      (Phi-3/Mixtral)</strong> → <strong>TTS output</strong>.
+                  </li>
+                  <li>
+                    <strong>Optimized</strong> GPU-accelerated Faster-Whisper for speech-to-text with 30-40% latency
+                    reduction using CUDA and batch processing.
+                  </li>
+                  <li>
+                    <strong>Implemented</strong> intent classification using scikit-learn on embeddings for fast routing
+                    before LLM processing, with Redis caching for context memory.
+                  </li>
+                  <li>
+                    <strong>Integrated</strong> WebSocket-based real-time streaming for continuous audio input/output
+                    and Coqui/Sarvam AI for natural voice synthesis.
+                  </li>
+                </ul>
+
+                <div class="project-tech">
+
+
+                  <span><i class="fas fa-cube"></i> Ollama</span>
+                  <span><i class="fas fa-brain"></i> LLMs</span>
+                  <span><i class="fas fa-microphone"></i> Faster-Whisper(STT)</span>
+                  <span><i class="fas fa-volume-up"></i> Sarvam AI(TTS)</span>
+                  <span><i class="fas fa-microphone-alt"></i> Porcupine(Wake Word Detection)</span>
+                  <span><i class="fas fa-database"></i> Vector DB</span>
+                  <span><i class="fab fa-python"></i> Python</span>
+                  <span><i class="fas fa-server"></i> FastAPI</span>
+                  <span><i class="fas fa-microchip"></i> GPU Inference (CUDA)</span>
+
+
+                </div>
+
+                <div class="project-links">
+                  <a href="https://github.com/alphakhush2201/FRIDAY" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                    <span>View Code</span>
+                  </a>
+                  <a href="#" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Architecture Docs</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more project cards as needed -->
+
+
+
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-box">
+              <div class="project-image">
+                <div class="slideshow-container">
+                  <div class="slides fade">
+                    <img src="syntaxsucks1.jpg" alt="School Management System - Dashboard" />
+                  </div>
+                  <div class="slides fade">
+                    <img src="syntaxsucks2.jpg" alt="School Management System - Student Portal" />
+                  </div>
+                  <div class="slides fade">
+                    <img src="syntaxsucks3.jpg" alt="Syntax Sucks" />
+                  </div>
+
+                  <!-- Navigation arrows -->
+                  <button class="prev" onclick="changeSlide(-1)">❮</button>
+                  <button class="next" onclick="changeSlide(1)">❯</button>
+
+                  <!-- Dots/circles -->
+                  <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <h3>Syntax Sucks</h3>
+                <ul class="project-description">
+                  <li>
+                    <strong>Developed</strong> <i>SyntaxSucks</i>, a no-code programming language that allows users to
+                    write applications using plain English.
+                  </li>
+                  <li>
+                    <strong>Designed</strong> a compiler that translates human-readable instructions into Python code,
+                    enabling non-tech users to build software easily.
+                  </li>
+                  <li>
+                    <strong>Integrated</strong> AI-powered assistance to help users refine their instructions and
+                    generate optimized code suggestions.
+                  </li>
+                  <li>
+                    <strong>Implemented</strong> a FastAPI backend for processing user inputs, authenticating requests,
+                    and managing generated code securely.
+                  </li>
+                  <li>
+                    <strong>Planned</strong> future enhancements, including a web-based interface, API integrations, and
+                    potential monetization models.
+                  </li>
+                </ul>
+
+                <div class="project-tech">
+                  <span><i class="fab fa-react"></i> React</span>
+                  <span><i class="fas fa-microchip"></i> Python</span>
+                  <span><i class="fas fa-server"></i> FastAPI Backend</span>
+                  <span><i class="fas fa-database"></i> PostgreSQL</span>
+                  <span><i class="fas fa-memory"></i> Redis (Rate Limiting & Caching)</span>
+                  <span><i class="fas fa-shield-alt"></i> JWT Authentication</span>
+                  <span><i class="fas fa-cloud"></i> API-Driven Architecture</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/alphakhush2201/SyntaxSucks" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                    <span>View Code</span>
+                  </a>
+                  <a href="https://syntaxsucks.vercel.app/" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Trading Bot project card ends here -->
+          </div>
+
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-box">
+              <div class="project-image">
+                <div class="slideshow-container">
+                  <div class="slides fade">
+                    <img src="project1.jpg" alt="School Management System - Dashboard" />
+                  </div>
+                  <div class="slides fade">
+                    <img src="project2.jpg" alt="School Management System - Student Portal" />
+                  </div>
+                  <div class="slides fade">
+                    <img src="project3.jpg" alt="School Management System - Admin Panel" />
+                  </div>
+
+                  <!-- Navigation arrows -->
+                  <button class="prev" onclick="changeSlide(-1)">❮</button>
+                  <button class="next" onclick="changeSlide(1)">❯</button>
+
+                  <!-- Dots/circles -->
+                  <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <h3>School Management System</h3>
+                <ul class="project-description">
+                  <li>
+                    <strong>Developed</strong> a
+                    <strong>School Management System</strong> using
+                    <strong>Spring Boot (Java) and Django/Flask (Python)</strong>
+                    for the backend.
+                  </li>
+                  <li>
+                    <strong>Designed</strong> a structured database to manage
+                    student details, class information, and fee records.
+                  </li>
+                  <li>
+                    <strong>Integrated</strong> a responsive
+                    <strong>frontend</strong> with the backend for seamless
+                    data retrieval and management.
+                  </li>
+                  <li>
+                    <strong>Planned</strong> future enhancements, including
+                    <strong>facial recognition for attendance</strong> and an
+                    <strong>online fee payment gateway</strong>.
+                  </li>
+                </ul>
+                <div class="project-tech">
+                  <span><i class="fab fa-html5"></i>HTML</span>
+                  <span><i class="fab fa-css3-alt"></i>CSS</span>
+                  <span><i class="fab fa-js"></i>JavaScript</span>
+                  <span><i class="fas fa-react"></i>React</span>
+                  <span><i class="fas fa-code"></i>Supabase</span>
+                  <span><i class="fab fa-database"></i>PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/alphakhush2201/ERP" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                    <span>View Code</span>
+                  </a>
+                  <a href="https://masteracademt.vercel.app/" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Trading Bot project card ends here -->
+          </div>
+
+          <!-- New Project Card -->
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-box">
+              <!-- Round Robin Project slideshow -->
+              <div class="project-image">
+                <div class="slideshow-container">
+                  <div class="slides fade">
+                    <img src="coupon1.png" alt="Round Robin Coupon - Dashboard" />
+                  </div>
+                  <div class="slides fade">
+                    <img src="coupon22.png" alt="Round Robin Coupon - Distribution" />
+                  </div>
+
+                  <!-- Navigation arrows -->
+                  <button class="prev" onclick="changeSlide(-1)">❮</button>
+                  <button class="next" onclick="changeSlide(1)">❯</button>
+
+                  <!-- Dots/circles -->
+                  <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <h3>Round Robin Coupon Distribution System</h3>
+                <ul class="project-description">
+                  <li>
+                    <strong>Designed</strong> and
+                    <strong>implemented</strong> a fair coupon distribution
+                    system using <strong>Spring Boot</strong> and
+                    <strong>React</strong>.
+                  </li>
+                  <li>
+                    <strong>Created</strong> an efficient algorithm for
+                    equitable distribution of coupons among customers using
+                    Round Robin scheduling.
+                  </li>
+                  <li>
+                    <strong>Built</strong> a real-time monitoring dashboard
+                    for tracking coupon distribution metrics and customer
+                    engagement.
+                  </li>
+                  <li>
+                    <strong>Integrated</strong> with multiple payment gateways
+                    and implemented secure authentication using JWT.
+                  </li>
+                </ul>
+                <div class="project-tech">
+                  <span><i class="fab fa-react"></i>React</span>
+                  <span><i class="fab fa-node-js"></i>Express.js</span>
+                  <span><i class="fab fa-python"></i>Python</span>
+                  <span><i class="fab fa-database"></i>FaunaDB</span>
+                  <span><i class="fab fa-code"></i>Spring Boot</span>
+                  <span><i class="fab fa-docker"></i>Docker</span>
+                  <span><i class="fab fa-cloud"></i> Railway</span>
+                  <span><i class="fab fa-database"></i>PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/alphakhush2201/assign.git" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                    <span>View Code SpringBoot</span>
+                  </a>
+                  <a href="https://github.com/alphakhush2201/Round_Robin_Coupon_Distribution.git" target="_blank"
+                    class="project-link">
+                    <i class="fab fa-github"></i>
+                    <span>View Code Express.js</span>
+                  </a>
+                  <a href="https://round-robin-coupon-app.netlify.app/" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Demo Express.js</span>
+                    <a href="https://coupon-frontend-seven.vercel.app/" target="_blank" class="project-link"><i
+                        class="fas fa-external-link-alt"></i><span>Live Demo SpringBoot</span></a>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item" data-aos="fade-up">
+            <div class="experience-date">Jan 2025 - Present</div>
+            <div class="experience-content">
+              <h3>Full Stack Developer</h3>
+              <h4>Master Academy(Freelance)</h4>
+              <ul>
+                <li>
+                  Developed a School Management System using React, Node.js,
+                  and MongoDB.
+                </li>
+                <li>
+                  Designed a structured database to manage student details,
+                  class information, and fee records.
+                </li>
+                <li>
+                  Integrated a responsive frontend with the backend for
+                  seamless data retrieval and management.
+                </li>
+                <li>
+                  Planned future enhancements, including facial recognition
+                  for attendance and an online fee payment gateway.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          
+          <!-- Add more experience items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Add this after the experience section and before the contact section -->
+    <section id="achievements" class="section achievements-section">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">Achievements</h2>
+        <div class="achievements-grid">
+          <!-- Achievement Card 1 -->
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Coding Ninjas Contest</h3>
+              <p>
+                Achieved AIR 75 rank in Coding Ninjas Contest(Premier league).
+              </p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2023</span>
+                <a href="#" class="achievement-link">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 2 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="achievement-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>RHCSA(In Progress)</h3>
+              <p>
+                Pursuing Red Hat Certified System Administrator (RHCSA) certification to validate Linux system
+                administration skills.
+              </p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2023</span>
+                <a href="#" class="achievement-link">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 3 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Python(Basic)</h3>
+              <p>Completed Python(Basic) course from HackerRank.</p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2025</span>
+                <a href="https://www.hackerrank.com/certificates/6bf55b85f65f" class="achievement-link">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Achievement Card 4 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Java(Basic)</h3>
+              <p>Completed Java(Basic) course from HackerRank.</p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2025</span>
+                <a href="https://www.hackerrank.com/certificates/57df5a9cf6cc" class="achievement-link">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 5 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Software Development Intern</h3>
+              <p>
+                Completed Certification for role Software Development Intern
+                from HackerRank.
+              </p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2023</span>
+                <a href="https://www.hackerrank.com/certificates/792c253faf92" class="achievement-link">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 6 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Problem Solving(Basic)</h3>
+              <p>Completed Problem Solving(Basic) course from HackerRank.</p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2023</span>
+                <a href="https://www.hackerrank.com/certificates/16a1d4ed509e" class="achievement-link">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 7 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Introduction to Java by LearnQuest</h3>
+              <p>Completed Introduction to Java course from Coursera.</p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2023</span>
+                <a href="https://coursera.org/share/5162879761d2a847cb6049d24d465eb3" class="achievement-link">View
+                  Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 8 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>Crash Course on Python by Google</h3>
+              <p>Completed Crash Course on Python course from Coursera.</p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2024</span>
+                <a href="https://coursera.org/share/f6a611ce0153c390b0f172e2db408ef0" class="achievement-link">View
+                  Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Card 9 -->
+          <div class="achievement-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="achievement-content">
+              <h3>
+                Introduction to Cybersecuity Tools & Cyberattacks by IBM
+              </h3>
+              <p>
+                Earned Introduction to Cybersecuity Tools & Cyberattacks
+                certification demonstrating cybersecuity fundamentals from
+                Coursera.
+              </p>
+              <div class="achievement-footer">
+                <span class="achievement-date">2024</span>
+                <a href="https://coursera.org/share/c8cc1321f6fb8f5c64510ec81827b61f" class="achievement-link">View
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:khushwant.ksc.in@gmail.com">khushwant.ksc.in@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+919720888267">+91 9720888267</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Jaipur,India</span>
+            </div>
+          </div>
+          <form class="contact-form" data-aos="fade-left">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <script src="script.js"></script>
+
+  <!-- Audio Player -->
+  <div class="audio-player">
+    <audio id="background-music" loop>
+      <source src="Interstellar-Theme.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <div class="audio-controls">
+      <button id="play-pause-btn">
+        <i class="fas fa-play"></i>
+      </button>
+      <div class="volume-control">
+        <i class="fas fa-volume-up"></i>
+        <input type="range" id="volume-slider" min="0" max="100" value="50" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Add this section before the closing body tag -->
+  <section id="resume" class="section">
+    <div class="section-container">
+      <h2 class="section-title">Resume</h2>
+      <div class="resume-container">
+        <a href="resume.pdf" target="_blank" class="resume-download-btn">
+          <i class="fas fa-download"></i>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>
