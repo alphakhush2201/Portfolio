@@ -103,15 +103,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         submitBtn.disabled = false;
                         contactForm.reset();
                     }, 2000);
+                } else if (response.status === 429) {
+                    throw new Error('Too many requests. Please try again in 15 minutes.');
                 } else {
                     throw new Error(data.message || 'Failed to send message');
                 }
             } catch (error) {
                 submitBtn.textContent = 'Error!';
+                console.error('Form submission error:', error);
                 setTimeout(() => {
                     submitBtn.textContent = originalBtnText;
                     submitBtn.disabled = false;
-                }, 2000);
+                }, 3000);
                 alert(error.message);
             }
         });
@@ -368,3 +371,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     });
 });
+
+// Toggle hidden projects
+function toggleProjects() {
+    const hiddenProjects = document.getElementById('hidden-projects');
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+
+    hiddenProjects.classList.toggle('show');
+    
+    if (hiddenProjects.classList.contains('show')) {
+        btnText.textContent = 'Show Less Projects';
+        btnIcon.classList.add('rotate');
+    } else {
+        btnText.textContent = 'Show More Projects';
+        btnIcon.classList.remove('rotate');
+    }
+}
+
+// Toggle hidden experience
+function toggleExperience() {
+    const hiddenExp = document.getElementById('hidden-experience');
+    const showMoreBtn = document.getElementById('show-more-exp-btn');
+    const btnText = document.getElementById('exp-btn-text');
+    const btnIcon = document.getElementById('exp-btn-icon');
+
+    hiddenExp.classList.toggle('show');
+    
+    if (hiddenExp.classList.contains('show')) {
+        btnText.textContent = 'Show Less Experience';
+        btnIcon.classList.add('rotate');
+    } else {
+        btnText.textContent = 'Show More Experience';
+        btnIcon.classList.remove('rotate');
+    }
+}
+
+// Toggle hidden achievements
+function toggleAchievements() {
+    const hiddenAch = document.getElementById('hidden-achievements');
+    const showMoreBtn = document.getElementById('show-more-ach-btn');
+    const btnText = document.getElementById('ach-btn-text');
+    const btnIcon = document.getElementById('ach-btn-icon');
+
+    hiddenAch.classList.toggle('show');
+    
+    if (hiddenAch.classList.contains('show')) {
+        btnText.textContent = 'Show Less Achievements';
+        btnIcon.classList.add('rotate');
+    } else {
+        btnText.textContent = 'Show More Achievements';
+        btnIcon.classList.remove('rotate');
+    }
+}

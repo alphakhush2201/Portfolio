@@ -344,6 +344,76 @@ body {
     color: var(--accent-secondary);
 }
 
+/* Hidden Projects Styles */
+.hidden-projects {
+    display: none;
+}
+
+.hidden-projects.show {
+    display: contents;
+}
+
+/* Hidden Experience Styles */
+.hidden-experience {
+    display: none;
+}
+
+.hidden-experience.show {
+    display: contents;
+}
+
+/* Hidden Achievements Styles */
+.hidden-achievements {
+    display: none;
+}
+
+.hidden-achievements.show {
+    display: contents;
+}
+
+/* Show More Button */
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    grid-column: 1 / -1;
+}
+
+.show-more-btn {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(124, 58, 237, 0.6);
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+}
+
+.show-more-btn:active {
+    transform: translateY(0);
+}
+
+#btn-icon {
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+}
+
+#btn-icon.rotate {
+    transform: rotate(180deg);
+}
+
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .project-box {

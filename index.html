@@ -345,83 +345,94 @@ I’m particularly interested in performance optimization, local inference, and 
             <!-- Trading Bot project card ends here -->
           </div>
 
-          <!-- New Project Card -->
-          <div class="project-card" data-aos="fade-up">
-            <div class="project-box">
-              <!-- Round Robin Project slideshow -->
-              <div class="project-image">
-                <div class="slideshow-container">
-                  <div class="slides fade">
-                    <img src="coupon1.png" alt="Round Robin Coupon - Dashboard" />
-                  </div>
-                  <div class="slides fade">
-                    <img src="coupon22.png" alt="Round Robin Coupon - Distribution" />
-                  </div>
+          <!-- Hidden Projects Container -->
+          <div id="hidden-projects" class="hidden-projects">
+            <!-- New Project Card -->
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-box">
+                <!-- Round Robin Project slideshow -->
+                <div class="project-image">
+                  <div class="slideshow-container">
+                    <div class="slides fade">
+                      <img src="coupon1.png" alt="Round Robin Coupon - Dashboard" />
+                    </div>
+                    <div class="slides fade">
+                      <img src="coupon22.png" alt="Round Robin Coupon - Distribution" />
+                    </div>
 
-                  <!-- Navigation arrows -->
-                  <button class="prev" onclick="changeSlide(-1)">❮</button>
-                  <button class="next" onclick="changeSlide(1)">❯</button>
+                    <!-- Navigation arrows -->
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
 
-                  <!-- Dots/circles -->
-                  <div class="dots-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <!-- Dots/circles -->
+                    <div class="dots-container">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="project-details">
-                <h3>Round Robin Coupon Distribution System</h3>
-                <ul class="project-description">
-                  <li>
-                    <strong>Designed</strong> and
-                    <strong>implemented</strong> a fair coupon distribution
-                    system using <strong>Spring Boot</strong> and
-                    <strong>React</strong>.
-                  </li>
-                  <li>
-                    <strong>Created</strong> an efficient algorithm for
-                    equitable distribution of coupons among customers using
-                    Round Robin scheduling.
-                  </li>
-                  <li>
-                    <strong>Built</strong> a real-time monitoring dashboard
-                    for tracking coupon distribution metrics and customer
-                    engagement.
-                  </li>
-                  <li>
-                    <strong>Integrated</strong> with multiple payment gateways
-                    and implemented secure authentication using JWT.
-                  </li>
-                </ul>
-                <div class="project-tech">
-                  <span><i class="fab fa-react"></i>React</span>
-                  <span><i class="fab fa-node-js"></i>Express.js</span>
-                  <span><i class="fab fa-python"></i>Python</span>
-                  <span><i class="fab fa-database"></i>FaunaDB</span>
-                  <span><i class="fab fa-code"></i>Spring Boot</span>
-                  <span><i class="fab fa-docker"></i>Docker</span>
-                  <span><i class="fab fa-cloud"></i> Railway</span>
-                  <span><i class="fab fa-database"></i>PostgreSQL</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/alphakhush2201/assign.git" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i>
-                    <span>View Code SpringBoot</span>
-                  </a>
-                  <a href="https://github.com/alphakhush2201/Round_Robin_Coupon_Distribution.git" target="_blank"
-                    class="project-link">
-                    <i class="fab fa-github"></i>
-                    <span>View Code Express.js</span>
-                  </a>
-                  <a href="https://round-robin-coupon-app.netlify.app/" target="_blank" class="project-link">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Live Demo Express.js</span>
-                    <a href="https://coupon-frontend-seven.vercel.app/" target="_blank" class="project-link"><i
-                        class="fas fa-external-link-alt"></i><span>Live Demo SpringBoot</span></a>
-                  </a>
+                <div class="project-details">
+                  <h3>Round Robin Coupon Distribution System</h3>
+                  <ul class="project-description">
+                    <li>
+                      <strong>Designed</strong> and
+                      <strong>implemented</strong> a fair coupon distribution
+                      system using <strong>Spring Boot</strong> and
+                      <strong>React</strong>.
+                    </li>
+                    <li>
+                      <strong>Created</strong> an efficient algorithm for
+                      equitable distribution of coupons among customers using
+                      Round Robin scheduling.
+                    </li>
+                    <li>
+                      <strong>Built</strong> a real-time monitoring dashboard
+                      for tracking coupon distribution metrics and customer
+                      engagement.
+                    </li>
+                    <li>
+                      <strong>Integrated</strong> with multiple payment gateways
+                      and implemented secure authentication using JWT.
+                    </li>
+                  </ul>
+                  <div class="project-tech">
+                    <span><i class="fab fa-react"></i>React</span>
+                    <span><i class="fab fa-node-js"></i>Express.js</span>
+                    <span><i class="fab fa-python"></i>Python</span>
+                    <span><i class="fab fa-database"></i>FaunaDB</span>
+                    <span><i class="fab fa-code"></i>Spring Boot</span>
+                    <span><i class="fab fa-docker"></i>Docker</span>
+                    <span><i class="fab fa-cloud"></i> Railway</span>
+                    <span><i class="fab fa-database"></i>PostgreSQL</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/alphakhush2201/assign.git" target="_blank" class="project-link">
+                      <i class="fab fa-github"></i>
+                      <span>View Code SpringBoot</span>
+                    </a>
+                    <a href="https://github.com/alphakhush2201/Round_Robin_Coupon_Distribution.git" target="_blank"
+                      class="project-link">
+                      <i class="fab fa-github"></i>
+                      <span>View Code Express.js</span>
+                    </a>
+                    <a href="https://round-robin-coupon-app.netlify.app/" target="_blank" class="project-link">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Live Demo Express.js</span>
+                      <a href="https://coupon-frontend-seven.vercel.app/" target="_blank" class="project-link"><i
+                          class="fas fa-external-link-alt"></i><span>Live Demo SpringBoot</span></a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Show More Button -->
+          <div class="show-more-container">
+            <button id="show-more-btn" class="show-more-btn" onclick="toggleProjects()">
+              <span id="btn-text">Show More Projects</span>
+              <i id="btn-icon" class="fas fa-chevron-down"></i>
+            </button>
           </div>
 
         </div>
@@ -432,6 +443,53 @@ I’m particularly interested in performance optimization, local inference, and 
       <div class="section-container">
         <h2 class="section-title" data-aos="fade-up">Experience</h2>
         <div class="experience-timeline">
+        <div class="experience-item" data-aos="fade-up">
+            <div class="experience-date">Sep 2024 - Dec 2024</div>
+            <div class="experience-content">
+              <h3>SQL Intern</h3>
+              <h4>Celebal Technologies</h4>
+              <ul>
+                <li>
+                  Developed and optimized complex SQL queries, stored procedures, functions, and triggers using SQL Server for real-world business datasets
+                </li>
+                <li>
+                  Improved query performance and data retrieval efficiency through indexing, query optimization, and better schema design
+                </li>
+                <li>
+                 Performed data aggregation, transformations, and advanced analytical queries to support reporting and business insights
+                </li>
+                <li>
+                  Built scalable and maintainable database components aligned with industry best practices
+                </li>
+                <li>Assisted in designing efficient data workflows to enhance accuracy and processing speed</li>
+                <li>Gained hands-on experience working with structured datasets and solving practical data-driven problems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item" data-aos="fade-up">
+            <div class="experience-date">May 2024 - Aug 2024</div>
+            <div class="experience-content">
+              <h3>Backend Developer</h3>
+              <h4>DataFlow Systems (Freelance)</h4>
+              <ul>
+                <li>
+                  Designed and maintained scalable backend services using FastAPI and PostgreSQL handling 10K+ requests/day.
+                </li>
+                <li>
+                  Implemented Redis caching layer for session management and real-time data processing.
+                </li>
+                <li>
+                  Developed microservices architecture with proper logging, monitoring, and error handling.
+                </li>
+                <li>
+                  Optimized database queries and implemented pagination, reducing query response time by 50%.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
           <div class="experience-item" data-aos="fade-up">
             <div class="experience-date">Jan 2025 - Present</div>
             <div class="experience-content">
@@ -458,8 +516,17 @@ I’m particularly interested in performance optimization, local inference, and 
             </div>
           </div>
 
-          
-          <!-- Add more experience items as needed -->
+          <!-- Hidden Experience Items Container -->
+          <div id="hidden-experience" class="hidden-experience">
+          </div>
+
+          <!-- Show More Button for Experience -->
+          <div class="show-more-container">
+            <button id="show-more-exp-btn" class="show-more-btn" onclick="toggleExperience()" style="display: none;">
+              <span id="exp-btn-text">Show More Experience</span>
+              <i id="exp-btn-icon" class="fas fa-chevron-down"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -566,58 +633,69 @@ I’m particularly interested in performance optimization, local inference, and 
             </div>
           </div>
 
-          <!-- Achievement Card 7 -->
-          <div class="achievement-card" data-aos="fade-up" data-aos-delay="600">
-            <div class="achievement-icon">
-              <i class="fas fa-certificate"></i>
+          <!-- Hidden Achievement Cards Container -->
+          <div id="hidden-achievements" class="hidden-achievements">
+            <!-- Achievement Card 7 -->
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="600">
+              <div class="achievement-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="achievement-content">
+                <h3>Introduction to Java by LearnQuest</h3>
+                <p>Completed Introduction to Java course from Coursera.</p>
+                <div class="achievement-footer">
+                  <span class="achievement-date">2023</span>
+                  <a href="https://coursera.org/share/5162879761d2a847cb6049d24d465eb3" class="achievement-link">View
+                    Details</a>
+                </div>
+              </div>
             </div>
-            <div class="achievement-content">
-              <h3>Introduction to Java by LearnQuest</h3>
-              <p>Completed Introduction to Java course from Coursera.</p>
-              <div class="achievement-footer">
-                <span class="achievement-date">2023</span>
-                <a href="https://coursera.org/share/5162879761d2a847cb6049d24d465eb3" class="achievement-link">View
-                  Details</a>
+
+            <!-- Achievement Card 8 -->
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="700">
+              <div class="achievement-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="achievement-content">
+                <h3>Crash Course on Python by Google</h3>
+                <p>Completed Crash Course on Python course from Coursera.</p>
+                <div class="achievement-footer">
+                  <span class="achievement-date">2024</span>
+                  <a href="https://coursera.org/share/f6a611ce0153c390b0f172e2db408ef0" class="achievement-link">View
+                    Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Achievement Card 9 -->
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="800">
+              <div class="achievement-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="achievement-content">
+                <h3>
+                  Introduction to Cybersecuity Tools & Cyberattacks by IBM
+                </h3>
+                <p>
+                  Earned Introduction to Cybersecuity Tools & Cyberattacks
+                  certification demonstrating cybersecuity fundamentals from
+                  Coursera.
+                </p>
+                <div class="achievement-footer">
+                  <span class="achievement-date">2024</span>
+                  <a href="https://coursera.org/share/c8cc1321f6fb8f5c64510ec81827b61f" class="achievement-link">View
+                    Details</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Achievement Card 8 -->
-          <div class="achievement-card" data-aos="fade-up" data-aos-delay="700">
-            <div class="achievement-icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="achievement-content">
-              <h3>Crash Course on Python by Google</h3>
-              <p>Completed Crash Course on Python course from Coursera.</p>
-              <div class="achievement-footer">
-                <span class="achievement-date">2024</span>
-                <a href="https://coursera.org/share/f6a611ce0153c390b0f172e2db408ef0" class="achievement-link">View
-                  Details</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Achievement Card 9 -->
-          <div class="achievement-card" data-aos="fade-up" data-aos-delay="800">
-            <div class="achievement-icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="achievement-content">
-              <h3>
-                Introduction to Cybersecuity Tools & Cyberattacks by IBM
-              </h3>
-              <p>
-                Earned Introduction to Cybersecuity Tools & Cyberattacks
-                certification demonstrating cybersecuity fundamentals from
-                Coursera.
-              </p>
-              <div class="achievement-footer">
-                <span class="achievement-date">2024</span>
-                <a href="https://coursera.org/share/c8cc1321f6fb8f5c64510ec81827b61f" class="achievement-link">View
-                  Details</a>
-              </div>
-            </div>
+          <!-- Show More Button for Achievements -->
+          <div class="show-more-container">
+            <button id="show-more-ach-btn" class="show-more-btn" onclick="toggleAchievements()">
+              <span id="ach-btn-text">Show More Achievements</span>
+              <i id="ach-btn-icon" class="fas fa-chevron-down"></i>
+            </button>
           </div>
         </div>
       </div>
