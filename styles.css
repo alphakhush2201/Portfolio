@@ -1139,24 +1139,28 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 1;
     z-index: 10000;
 }
 
 .cursor-dot {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: var(--accent-primary);
-    box-shadow: 0 0 10px var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-primary), 0 0 15px var(--accent-glow);
+    transform: translate(-50%, -50%);
 }
 
 .cursor-dot-outline {
     width: 80px;
     height: 80px;
-    background: rgba(124, 58, 237, 0.2);
-    backdrop-filter: blur(2px);
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+    background: rgba(124, 58, 237, 0.15);
+    backdrop-filter: blur(4px);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.4), inset 0 0 20px rgba(124, 58, 237, 0.2);
+    transition: all 0.1s ease-out;
 }
 
 /* Hover effect for clickable elements */
@@ -1164,7 +1168,9 @@ a:hover ~ .cursor-dot,
 button:hover ~ .cursor-dot,
 .nav-item:hover ~ .cursor-dot,
 .project-box:hover ~ .cursor-dot {
-    transform: translate(-50%, -50%) scale(2);
+    width: 12px;
+    height: 12px;
+    box-shadow: 0 0 12px var(--accent-primary), 0 0 25px var(--accent-glow);
 }
 
 a:hover ~ .cursor-dot-outline,
@@ -1173,7 +1179,9 @@ button:hover ~ .cursor-dot-outline,
 .project-box:hover ~ .cursor-dot-outline {
     width: 100px;
     height: 100px;
-    background: rgba(124, 58, 237, 0.3);
+    border: 2.5px solid var(--accent-secondary);
+    background: rgba(124, 58, 237, 0.25);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.6), inset 0 0 30px rgba(124, 58, 237, 0.3);
 }
 
 /* Hide on mobile */

@@ -233,18 +233,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorOutline = document.querySelector(".cursor-dot-outline");
     let cursorX = 0;
     let cursorY = 0;
+    let outlineX = 0;
+    let outlineY = 0;
 
-    // Cursor Movement
+    // Cursor Movement with smooth trailing effect
     document.addEventListener('mousemove', (e) => {
         cursorX = e.clientX;
         cursorY = e.clientY;
         
-        requestAnimationFrame(() => {
-            const transform = `translate(${cursorX}px, ${cursorY}px)`;
-            cursorDot.style.transform = transform;
-            cursorOutline.style.transform = transform;
-        });
+        // Inner dot follows immediately
+        cursorDot.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
     });
+
+    // Smooth animation loop for outer bubble with trailing effect
+    function animateCursorOutline() {
+        // Ease the outline towards the cursor position
+        outlineX += (cursorX - outlineX) * 0.2;
+        outlineY += (cursorY - outlineY) * 0.2;
+        
+        cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+        
+        requestAnimationFrame(animateCursorOutline);
+    }
+
+    animateCursorOutline();
 
     // Tech Rain
     class TechDrop {
